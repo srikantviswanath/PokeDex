@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1DF40C1CB32EE700DCC2B9 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = CB1DF40B1CB32EE700DCC2B9 /* pokemon.csv */; };
 		CBDB14051CB2294300B45153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB14041CB2294300B45153 /* AppDelegate.swift */; };
 		CBDB14071CB2294300B45153 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDB14061CB2294300B45153 /* ViewController.swift */; };
 		CBDB140A1CB2294300B45153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBDB14081CB2294300B45153 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB1DF40B1CB32EE700DCC2B9 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		CBDB14011CB2294300B45153 /* PokeDex.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeDex.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDB14041CB2294300B45153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBDB14061CB2294300B45153 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				CBDB14041CB2294300B45153 /* AppDelegate.swift */,
 				CBDB14061CB2294300B45153 /* ViewController.swift */,
+				CB1DF40B1CB32EE700DCC2B9 /* pokemon.csv */,
 				CBDB14081CB2294300B45153 /* Main.storyboard */,
 				CBDB140E1CB2294300B45153 /* Assets.xcassets */,
 				CBDB14101CB2294300B45153 /* LaunchScreen.storyboard */,
@@ -234,6 +237,7 @@
 			files = (
 				CBDB14121CB2294300B45153 /* LaunchScreen.storyboard in Resources */,
 				CBDB140F1CB2294300B45153 /* Assets.xcassets in Resources */,
+				CB1DF40C1CB32EE700DCC2B9 /* pokemon.csv in Resources */,
 				CBDB140A1CB2294300B45153 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +492,7 @@
 				CBDB142E1CB2294300B45153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBDB142F1CB2294300B45153 /* Build configuration list for PBXNativeTarget "PokeDexTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				CBDB14311CB2294300B45153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBDB14321CB2294300B45153 /* Build configuration list for PBXNativeTarget "PokeDexUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +510,7 @@
 				CBDB14341CB2294300B45153 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
