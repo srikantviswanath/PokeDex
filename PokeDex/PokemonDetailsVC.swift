@@ -21,6 +21,8 @@ class PokemonDetailsVC: UIViewController {
     @IBOutlet weak var currentEvoImg: UIImageView!
     @IBOutlet weak var pokedexLbl: UILabel!
     @IBOutlet weak var heightLbl: UILabel!
+    @IBOutlet weak var weightLbl: UILabel!
+    @IBOutlet weak var attackLbl: UILabel!
     @IBAction func backToPokeList(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -28,10 +30,26 @@ class PokemonDetailsVC: UIViewController {
         super.viewDidLoad()
         nameLbl.text = pokemonSegued.pokeName
         mainImg.image = UIImage(named: "\(pokemonSegued.pokedexId)")
+        self.pokedexLbl.text = "\(pokemonSegued.pokedexId)"
         pokemonSegued.downloadPokemonDetails{ () ->() in
-            //This will be executed after download has successfully finished
+            self.updateUIAfterNetworkCall()
         }
-        
+    }
+    
+    func updateUIAfterNetworkCall(){
+        typeLbl.text = self.pokemonSegued.pokeType
+        defenseLbl.text = self.pokemonSegued.defense
+        heightLbl.text = self.pokemonSegued.height
+        descriptionLbl.text = self.pokemonSegued.description
+        weightLbl.text = self.pokemonSegued.weight
+        attackLbl.text = self.pokemonSegued.attack
+        nextEvoImg.image = UIImage(named: "\(pokemonSegued.nextEvolutionId)")
+        if pokemonSegued.nextEvolutionName != "" {
+            evoLbl.text = "Next Evolution: \(self.pokemonSegued.nextEvolutionName) at Lvl \(pokemonSegued.nextEvolutionId)"
+            currentEvoImg.image = mainImg.image
+        }else{
+            evoLbl.text = "Pokemon at its highest evolution form"
+        }
     }
 
 
