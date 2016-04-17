@@ -119,7 +119,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         }else{
             searchEnabled = true
             let tokenEntered = searchBar.text!.lowercaseString
-            filteredPokeMon = pokemonList.filter({$0.name.rangeOfString(tokenEntered) != nil})
+            filteredPokeMon = pokemonList.filter({$0.pokeName.rangeOfString(tokenEntered) != nil})
             collectionView.reloadData()
         }
     }
@@ -128,7 +128,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if segue.identifier == "PokemonDetailsVC" {
             if let detailsVC = segue.destinationViewController as? PokemonDetailsVC{
                 if let poke = sender as? Pokemon{
-                    detailsVC.dataSentFromCollectionView = poke.name
+                    detailsVC.pokemonSegued = poke
                 }
             }
         }

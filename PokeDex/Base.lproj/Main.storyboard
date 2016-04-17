@@ -481,12 +481,21 @@
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="currentEvoImg" destination="zv7-So-EFD" id="hSh-Vh-ps0"/>
+                        <outlet property="defenseLbl" destination="J93-at-Xaq" id="hzB-r3-5sZ"/>
+                        <outlet property="descriptionLbl" destination="1ys-nh-O1M" id="tVs-Fh-nvI"/>
+                        <outlet property="evoLbl" destination="1WD-SP-fS9" id="hEM-CQ-aiZ"/>
+                        <outlet property="heightLbl" destination="u9j-vb-1gZ" id="910-fY-0Q1"/>
+                        <outlet property="mainImg" destination="jaU-N9-hJM" id="VNg-Oc-QKP"/>
                         <outlet property="nameLbl" destination="2Tr-th-3Jv" id="ezy-Ce-LVE"/>
+                        <outlet property="nextEvoImg" destination="IhU-ys-aMn" id="tAs-X7-L4h"/>
+                        <outlet property="pokedexLbl" destination="xg9-tc-GpW" id="6yO-VE-vEl"/>
+                        <outlet property="typeLbl" destination="1PO-vt-q6K" id="fFn-1D-eIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2t5-re-hgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1532" y="152"/>
+            <point key="canvasLocation" x="1546" y="73"/>
         </scene>
     </scenes>
     <resources>
