@@ -26,6 +26,7 @@ class PokemonDetailsVC: UIViewController {
     @IBAction func backToPokeList(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLbl.text = pokemonSegued.pokeName
@@ -49,7 +50,22 @@ class PokemonDetailsVC: UIViewController {
             currentEvoImg.image = mainImg.image
         }else{
             evoLbl.text = "Pokemon at its highest evolution form"
+            currentEvoImg.image = nil
         }
+        prepareNextEvoBio()
+    }
+    
+    func prepareNextEvoBio(){
+        if pokemonSegued.nextEvolutionId != ""{
+            let tapGesture = UITapGestureRecognizer(target: self, action: #selector(PokemonDetailsVC.nextEvoPressed))
+            nextEvoImg.addGestureRecognizer(tapGesture)
+            nextEvoImg.userInteractionEnabled = true
+        }
+    }
+    
+    func nextEvoPressed(){
+        pokemonSegued = Pokemon(name: pokemonSegued.nextEvolutionName, pokedexId: Int(pokemonSegued.nextEvolutionId)!)
+        self.viewDidLoad()
     }
 
 
