@@ -29,7 +29,7 @@ class PokemonDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLbl.text = pokemonSegued.pokeName
+        nameLbl.text = pokemonSegued.pokeName.capitalizedString
         mainImg.image = UIImage(named: "\(pokemonSegued.pokedexId)")
         self.pokedexLbl.text = "\(pokemonSegued.pokedexId)"
         pokemonSegued.downloadPokemonDetails{ () ->() in
